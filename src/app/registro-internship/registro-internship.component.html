@@ -1,0 +1,23 @@
+<form [formGroup]="internshipForm" (ngSubmit)="registrarInternship()">
+    
+    <div class="form-group">
+      <label>titulo del internado</label>
+      <input type="text" formControlName="internshipName" class="form-control">
+    </div>
+    <div class="form-group">
+      <label>detalles del internado</label>
+      <input type="text" formControlName="details" class="form-control">
+    </div>
+    <div class="form-group">
+      <label>fecha de inicio</label>
+      <input type="date" formControlName="startDate" class="form-control">
+    </div>
+    <div class="form-group">
+      <label>fecha de final</label>
+      <input type="date" formControlName="endDate" class="form-control">
+    </div>
+    
+    <button type="submit">Registrar</button>
+  </form>
+  
+

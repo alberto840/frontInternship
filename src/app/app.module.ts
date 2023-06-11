@@ -13,6 +13,8 @@ import { HomeEnterpriseComponent } from './home-enterprise/home-enterprise.compo
 import { PerfilEnterpriseComponent } from './perfil-enterprise/perfil-enterprise.component';
 import { SolicitudesInternshipComponent } from './solicitudes-internship/solicitudes-internship.component';
 import { RegistroStudentComponent } from './registro-student/registro-student.component';
+import { RegistroEnterpriseComponent } from './registro-enterprise/registro-enterprise.component';
+import { RegistroInternshipComponent } from './registro-internship/registro-internship.component';
 
 
 @NgModule({
@@ -23,7 +25,9 @@ import { RegistroStudentComponent } from './registro-student/registro-student.co
     HomeEnterpriseComponent,
     PerfilEnterpriseComponent,
     SolicitudesInternshipComponent,
-    RegistroStudentComponent
+    RegistroStudentComponent,
+    RegistroEnterpriseComponent,
+    RegistroInternshipComponent
   ],
   imports: [
     BrowserModule,
