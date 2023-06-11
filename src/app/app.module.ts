@@ -15,6 +15,7 @@ import { SolicitudesInternshipComponent } from './solicitudes-internship/solicit
 import { RegistroStudentComponent } from './registro-student/registro-student.component';
 import { RegistroEnterpriseComponent } from './registro-enterprise/registro-enterprise.component';
 import { RegistroInternshipComponent } from './registro-internship/registro-internship.component';
+import { InternshipDetalleComponent } from './internship-detalle/internship-detalle.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { RegistroInternshipComponent } from './registro-internship/registro-inte
     SolicitudesInternshipComponent,
     RegistroStudentComponent,
     RegistroEnterpriseComponent,
-    RegistroInternshipComponent
+    RegistroInternshipComponent,
+    InternshipDetalleComponent
   ],
   imports: [
     BrowserModule,
