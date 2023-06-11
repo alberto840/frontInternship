@@ -10,7 +10,7 @@ import { Component } from '@angular/core';
 })
 export class HomeEnterpriseComponent {
   private apiUrl = 'http://localhost:8080/api/v1/enterprises'; // URL de tu backend
-
+  pasantes!: any;
   constructor(private http: HttpClient) {}
 
   getEmpresas(): Observable<any> {
