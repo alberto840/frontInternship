@@ -17,21 +17,31 @@
       <p>Email: empresa@example.com</p>
       <p>Teléfono: 123456789</p>
     </div>
-  
+
     <div class="column">
       <h2>Servicios</h2>
-      <ul>
-        <li>Servicio A</li>
-        <li>Servicio B</li>
-        <li>Servicio C</li>
-        <div class="services">
-          <h2>Servicios</h2>
-          <p>Descripción de los servicios ofrecidos.</p>
-          <button class="btn">Ver más</button>
-        </div>
-      </ul>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Empresa</th>
+            <th>Titulo de la pasantía</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of internships">
+            <td>{{item.id_enterprise}}</td>
+            <td>{{item.titleDeal}}</td>
+            <td>
+            <form (ngSubmit)="goSoli()">
+              <button type="submit" class="p-12 btn btn-light">Ver Detalle</button>
+            </form>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <button class="btn btn-link" (click)="goSoli()">Ver Solicitudes</button>
     </div>
-  
+
     <div class="column">
       <h2>Clientes</h2>
       <ul>

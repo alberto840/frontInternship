@@ -11,6 +11,10 @@ import { Router } from '@angular/router';
   styleUrls: ['./homestudent.component.css']
 })
 export class HomestudentComponent implements OnInit{
+  nombreIntern: String = '';
+  detailIntern: String = '';
+  startD: String = '';
+  endD: String = '';
 
   internships!: any;
   constructor(private route: ActivatedRoute, private router: Router, public fb: FormBuilder, public internshipsService: InternshipsService){}
@@ -19,6 +23,7 @@ export class HomestudentComponent implements OnInit{
     this.internshipsService.getAllInternships().subscribe(
       response => {
         this.internships = response;
+
         // Manejar la respuesta de éxito aquí
         console.log('Intership mostrados', response);
       },
@@ -30,7 +35,11 @@ export class HomestudentComponent implements OnInit{
   }
 
   goIDetails(){
-    this.router.navigate(['/internshipDetails']);
+    this.nombreIntern = this.internships[0].titleDeal;
+        this.detailIntern = this.internships[0].detailsDeal;
+        this.startD = this.internships[0].starDate;
+        this.endD = this.internships[0].endDate;
+    this.router.navigate(['/internshipDetails'], { queryParams: { string: this.nombreIntern, string1: this.detailIntern, string2: this.startD, string3: this.endD } });
   }
 
 }

@@ -23,3 +23,82 @@
   .navbar-button:hover {
     background-color: #777;
   }
+
+  /* Estilos generales */
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.column {
+  flex-basis: 30%;
+}
+
+h2 {
+  color: #333;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+p {
+  color: #666;
+  margin-bottom: 5px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+/* Estilos de la barra de navegación */
+
+.navbar {
+  background-color: #333;
+  padding: 10px;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar li {
+  display: inline;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 10px;
+}
+
+.notification img {
+  vertical-align: middle;
+}
+
+/* Estilos del botón de servicios */
+
+.services .btn {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.services .btn:hover {
+  background-color: #666;
+}
+

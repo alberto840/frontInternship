@@ -18,16 +18,28 @@
         <li>Pasante 3</li>
       </ul>
     </div>
-  
+
     <div class="column">
       <h2>Solicitudes de Pasantía</h2>
-      <ul>
-        <li>Solicitud 1</li>
-        <li>Solicitud 2</li>
-        <li>Solicitud 3</li>
-      </ul>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Pasante id</th>
+            <th>nombre pasante</th>
+            <th>detalle de pasantia</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of pasantes">
+            <td>{{item.studentId}}</td>
+            <td>{{item.firstName}}</td>
+            <td><button class="btn btn-link" (click)="goBack()">Aceptar</button></td>
+            <td><button class="btn btn-link" (click)="goBack()">Denegar</button></td>
+          </tr>
+        </tbody>
+      </table>
     </div>
-  
+
     <div class="column">
       <h2>Búsquedas Recientes</h2>
       <ul>

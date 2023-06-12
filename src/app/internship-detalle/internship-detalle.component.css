@@ -1,0 +1,82 @@
+/* Estilos generales */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Estilos de la barra de navegación */
+.navbar {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar li {
+  display: inline;
+}
+
+.navbar li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+}
+
+/* Estilos del título en la barra de navegación */
+.navbar .titulo {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Estilos de la notificación en la barra de navegación */
+.navbar .notification img {
+  vertical-align: middle;
+}
+
+/* Estilos del contenido */
+.content {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+/* Estilos de las columnas */
+.column1,
+.column2,
+.column3 {
+  flex-basis: 30%;
+}
+
+/* Estilos de las tablas */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+}
+
+/* Estilos para el botón en la tabla */
+.table .btn {
+  padding: 6px 12px;
+  background-color: #fff;
+  border: 1px solid #333;
+  color: #333;
+  cursor: pointer;
+}
+
+.table .btn:hover {
+  background-color: #333;
+  color: #fff;
+}
