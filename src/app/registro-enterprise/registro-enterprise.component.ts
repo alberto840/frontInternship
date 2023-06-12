@@ -16,7 +16,7 @@ export class RegistroEnterpriseComponent implements OnInit {
   ngOnInit(): void {
     this.enterpriseForm = this.fb.group({
       enterpriseId : ['', Validators.required],
-        documentID : ['', Validators.required],
+      documentId : ['', Validators.required],
         enterpriseName : ['', Validators.required],
         email : ['', Validators.required],
         username : ['', Validators.required],

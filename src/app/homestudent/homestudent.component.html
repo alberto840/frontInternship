@@ -29,7 +29,11 @@
           <tr *ngFor="let item of internships">
             <td>{{item.id_enterprise}}</td>
             <td>{{item.titleDeal}}</td>
-            <td><button>Ver Detalle</button></td>
+            <td>
+            <form (ngSubmit)="goIDetails()">
+              <button type="submit" class="p-12 btn btn-light">Ver Detalle</button>
+            </form>
+            </td>
           </tr>
         </tbody>
       </table>

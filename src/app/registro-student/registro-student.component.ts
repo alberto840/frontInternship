@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { StudentService } from '../services/student/student.service';
+import { ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -13,7 +15,7 @@ export class RegistroStudentComponent implements OnInit {
   studentForm!: FormGroup;
   career!: any;
 
-  constructor(public fb: FormBuilder, public studentService: StudentService){}
+  constructor(private router: Router, public fb: FormBuilder, public studentService: StudentService){}
   ngOnInit(): void {
     this.studentForm = this.fb.group({
       studentId : ['', Validators.required],
@@ -35,12 +37,14 @@ export class RegistroStudentComponent implements OnInit {
       response => {
         // Manejar la respuesta de éxito aquí
         console.log('Estudiante creado exitosamente', response);
+        this.router.navigate(['/login-component']);
       },
       error => {
         // Manejar el error aquí
         console.error('Error al crear el estudiante', error);
       }
       )
+
   }
 
 }

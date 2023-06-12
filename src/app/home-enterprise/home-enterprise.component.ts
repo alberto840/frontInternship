@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home-enterprise',
@@ -11,10 +13,13 @@ import { Component } from '@angular/core';
 export class HomeEnterpriseComponent {
   private apiUrl = 'http://localhost:8080/api/v1/enterprises'; // URL de tu backend
   pasantes!: any;
-  constructor(private http: HttpClient) {}
+  constructor(private router: Router, private http: HttpClient) {}
 
   getEmpresas(): Observable<any> {
     return this.http.get<any>(this.apiUrl);
+  }
+  goPerfil(){
+    this.router.navigate(['/perfilEnterprise']);
   }
 }
 

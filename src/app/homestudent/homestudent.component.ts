@@ -2,6 +2,9 @@ import { InternshipsService } from './../services/internships/internships.servic
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 
+import { ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-homestudent',
   templateUrl: './homestudent.component.html',
@@ -10,7 +13,7 @@ import { Component, OnInit } from '@angular/core';
 export class HomestudentComponent implements OnInit{
 
   internships!: any;
-  constructor(public fb: FormBuilder, public internshipsService: InternshipsService){}
+  constructor(private route: ActivatedRoute, private router: Router, public fb: FormBuilder, public internshipsService: InternshipsService){}
 
   ngOnInit(): void {
     this.internshipsService.getAllInternships().subscribe(
@@ -24,6 +27,10 @@ export class HomestudentComponent implements OnInit{
         console.error('Error al mostrar el intership', error);
       }
     )
+  }
+
+  goIDetails(){
+    this.router.navigate(['/internshipDetails']);
   }
 
 }
